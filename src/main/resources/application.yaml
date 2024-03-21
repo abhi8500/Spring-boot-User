@@ -1,0 +1,23 @@
+server:
+  port : 8500
+  servlet:
+    context-path: /api/v1
+spring:
+  application:
+    name : user-service
+  datasource:
+    username: sa
+    url: jdbc:h2:tcp://localhost/./Apps/DB/userdb
+    driverClassName: org.h2.Driver
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      format_sql: true
+      ddl-auto : update
+      id :
+        new_generator_mappings : true
+token:
+  signing:
+    key: 413F4428472B4B6250655368566D5970337336763979244226452948404D6351
